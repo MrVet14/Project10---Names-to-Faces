@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K1q-5e-shH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Mws-YF-Xxu">
+            <objects>
+                <collectionViewController id="djH-e9-xyq" customClass="ViewController" customModule="Project10___Names_to_Faces" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dii-Ne-rrV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yXS-7h-vHk">
+                            <size key="itemSize" width="140" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Person" id="UCd-28-NeN" customClass="PersonCell" customModule="Project10___Names_to_Faces" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="140" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w3t-94-M46" customClass="PersonCell" customModule="Project10___Names_to_Faces" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pG9-re-wP4">
+                                            <rect key="frame" x="10" y="11.5" width="120" height="116.5"/>
+                                            <imageReference key="image" image="square.and.arrow.down.fill" catalog="system" symbolScale="small" renderingMode="hierarchical">
+                                                <hierarchicalColors>
+                                                    <color systemColor="linkColor"/>
+                                                    <color systemColor="systemPinkColor"/>
+                                                    <color systemColor="systemGreenColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGm-r2-SQM">
+                                            <rect key="frame" x="10" y="134" width="120" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="5F8-sX-Qyz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="WGm-r2-SQM" secondAttribute="bottom" constant="6" id="29r-D3-FeT"/>
+                                        <constraint firstItem="WGm-r2-SQM" firstAttribute="leading" secondItem="w3t-94-M46" secondAttribute="leadingMargin" id="41d-sH-EOs"/>
+                                        <constraint firstItem="WGm-r2-SQM" firstAttribute="leading" secondItem="pG9-re-wP4" secondAttribute="leading" id="DgI-5E-a8k"/>
+                                        <constraint firstItem="WGm-r2-SQM" firstAttribute="trailing" secondItem="w3t-94-M46" secondAttribute="trailingMargin" id="Ez3-zB-ecm"/>
+                                        <constraint firstItem="WGm-r2-SQM" firstAttribute="top" secondItem="pG9-re-wP4" secondAttribute="bottom" constant="4" id="dpV-v3-rhK"/>
+                                        <constraint firstItem="pG9-re-wP4" firstAttribute="top" secondItem="w3t-94-M46" secondAttribute="topMargin" id="ruM-WV-GmJ"/>
+                                        <constraint firstItem="WGm-r2-SQM" firstAttribute="trailing" secondItem="pG9-re-wP4" secondAttribute="trailing" id="yCd-ge-PhU"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
+                                <size key="customSize" width="140" height="180"/>
+                                <connections>
+                                    <outlet property="imageView" destination="pG9-re-wP4" id="RN1-WY-VdL"/>
+                                    <outlet property="name" destination="WGm-r2-SQM" id="9BZ-hk-hhb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="djH-e9-xyq" id="ebm-L2-8Ke"/>
+                            <outlet property="delegate" destination="djH-e9-xyq" id="8dd-Pt-CdS"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="kgM-cR-oxF"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zv-mE-hAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.95652173913049" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4iU-PZ-S1W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K1q-5e-shH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IBS-aL-QG2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="djH-e9-xyq" kind="relationship" relationship="rootViewController" id="Y1V-Za-xns"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2u7-rb-U0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76.811594202898561" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
